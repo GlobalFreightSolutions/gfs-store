@@ -612,6 +612,7 @@
                 }
 
                 window.addEventListener('store-changed', this.onStoreChanged.bind(this), false);
+                window.addEventListener('store-unselected', this.onStoreChanged.bind(this), false);
             },
 
             initData: function () {
@@ -665,7 +666,9 @@
 
             //Global event handler
             onStoreChanged: function (e) {
-                this.render();
+                if (this.storeData.isStore) {
+                    this.render();
+                }
             },
 
             //Local event fired
@@ -687,6 +690,7 @@
                 if (this.storeData.chosen) {
                     this.buttonClass = "chosen";
                     this.displayButtonText = this.buttonDeselectedText;
+                    this.fire("droppoint-unselected", this.storeData);
                 }
                 else {
                     this.buttonClass = "unchosen";
@@ -731,7 +735,7 @@
             },
 
             _computeIcon: function(countryCode, providerName) {
-                var url = this.resolveUrl('images/carriers');
+                var url = this.resolveUrl('./images/carriers');
 
                 if (providerName === 'DPD') {
                     this.providerName = 'dpdpickup'
