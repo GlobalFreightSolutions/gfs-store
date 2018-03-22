@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <title>gfs-store demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+        <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+        <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+        <link rel="import" href="../../gfs-checkout-widget/gfs-checkout-widget.html">
+        <link rel="import" href="../gfs-store.html">
+
+        <style is="custom-style" include="demo-pages-shared-styles">
+        </style>
+
+    </head>
+    <body>
+
+        <div class="vertical-section-container centered">
+            <h3>Basic gfs-store Demo</h3>
+            <gfs-store id="ddList" class="droppoint-margin"
+                           container-class="dp-card" show-opening-hours="true" button-type="standard"
+                           store-data='{"droppointId":"DPD-123","isStore":true,"providerName":"DPD","distanceInMeters":888,"localizedDistance":"888 meters","droppointDescription":"The Pharmacy at Mayfair (Numark)","geoLocation":{"addressLines":["Shepherd Market"],"town":"London","postCode":"W1J 7UD","countryCode":"GB","directions":"The Pharmacy at Mayfair (Numark)"},"collectionSlots":[{"collectionDate":"2016-11-10T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-11T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-12T00:00:00Z","timeSlots":[]},{"collectionDate":"2016-11-13T00:00:00Z","timeSlots":[]},{"collectionDate":"2016-11-14T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-15T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-16T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-17T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-18T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-19T00:00:00Z","timeSlots":[]},{"collectionDate":"2016-11-20T00:00:00Z","timeSlots":[]},{"collectionDate":"2016-11-21T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-22T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-23T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-24T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]}]}'>
+            </gfs-store>
+    </div>
+
+    </body>
+</html>

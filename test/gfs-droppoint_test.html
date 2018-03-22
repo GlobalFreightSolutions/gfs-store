@@ -1,0 +1,55 @@
+﻿﻿<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+        <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+        <script src="../../web-component-tester/browser.js"></script>
+
+        <link rel="import" href="../../gfs-checkout-widget/gfs-checkout-widget.html">
+        <link rel="import" href="../gfs-droppoint.html">
+    </head>
+    <body>
+        <test-fixture id="gfsDroppoint">
+            <template>
+                <gfs-droppoint id="ddList" class="droppoint-margin"
+                               container-class="dp-card" show-opening-hours="true" button-type="standard"
+                               droppoint-data='{"droppointId":"DPD-123","isStore":false,"providerName":"DPD","distanceInMeters":888,"localizedDistance":"888 meters","droppointDescription":"The Pharmacy at Mayfair (Numark)","geoLocation":{"addressLines":["Shepherd Market"],"town":"London","postCode":"W1J 7UD","countryCode":"GB","directions":"The Pharmacy at Mayfair (Numark)"},"collectionSlots":[{"collectionDate":"2016-11-10T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-11T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-12T00:00:00Z","timeSlots":[]},{"collectionDate":"2016-11-13T00:00:00Z","timeSlots":[]},{"collectionDate":"2016-11-14T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-15T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-16T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-17T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-18T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-19T00:00:00Z","timeSlots":[]},{"collectionDate":"2016-11-20T00:00:00Z","timeSlots":[]},{"collectionDate":"2016-11-21T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-22T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-23T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]},{"collectionDate":"2016-11-24T00:00:00Z","timeSlots":[{"from":"09:30","to":"17:00"}]}]}'>
+                </gfs-droppoint>
+            </template>
+        </test-fixture>
+
+        <script>
+            suite('gfs-droppoint', function() {
+                var gfsDroppoint;
+                
+                setup(function () {
+                    gfsDroppoint = fixture('gfsDroppoint');
+                });
+
+                test('instantiating the element works', function() {
+                    assert.equal(gfsDroppoint.is, 'gfs-droppoint');
+                });
+
+                test('show opening hours is set to true', function() {
+                    assert.equal(gfsDroppoint.showOpeningHours, true);
+                });
+
+                test('Show the distance is set to true', function() {
+                    assert.equal(gfsDroppoint.showDistance, true);
+                });
+
+                test('element droppoint chosen is set to false', function() {
+                    assert.equal(gfsDroppoint.droppointChosen, false);
+                });
+
+                test('change element droppoint chosen to true', function() {
+                    gfsDroppoint.droppointChosen = true;
+                    assert.equal(gfsDroppoint.droppointChosen, true);
+                });
+
+            });
+        </script>
+    </body>
+</html>
