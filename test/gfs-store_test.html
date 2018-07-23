@@ -22,31 +22,31 @@
 
         <script>
             suite('gfs-store', function() {
-                var gfsDroppoint;
+                var gfsStore;
 
                 setup(function () {
-                    gfsDroppoint = fixture('gfsStore');
+                    gfsStore = fixture('gfsStore');
                 });
 
                 test('instantiating the element works', function() {
-                    assert.equal(gfsDroppoint.is, 'gfs-store');
+                    assert.equal(gfsStore.is, 'gfs-store');
                 });
 
                 test('show opening hours is set to true', function() {
-                    assert.equal(gfsDroppoint.showOpeningHours, true);
+                    assert.equal(gfsStore.showOpeningHours, true);
                 });
 
                 test('Show the distance is set to true', function() {
-                    assert.equal(gfsDroppoint.showDistance, true);
+                    assert.equal(gfsStore.showDistance, true);
                 });
 
                 test('element store chosen is set to false', function() {
-                    assert.equal(gfsDroppoint.droppointChosen, false);
+                    assert.equal(gfsStore.storeChosen, false);
                 });
 
                 test('change element store chosen to true', function() {
-                    gfsDroppoint.droppointChosen = true;
-                    assert.equal(gfsDroppoint.droppointChosen, true);
+                    gfsStore.storeChosen = true;
+                    assert.equal(gfsStore.storeChosen, true);
                 });
 
             });
