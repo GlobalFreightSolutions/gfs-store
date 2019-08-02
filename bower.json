@@ -1,35 +1,5 @@
 {
   "name": "gfs-store",
-  "version": "1.1.0",
-  "description": "The Store widget is used to show the available stores on the map",
-  "authors": [
-    "Global Freight Solutions Ltd <devsupport@justshoutgfs.com>"
-  ],
-  "keywords": [
-    "store",
-    "gfs",
-    "checkout",
-    "polymer",
-    "web-components"
-  ],
-  "dependencies": {
-    "polymer": "^1.10.0",
-    "gfs-checkout-widget": "^1.3.0"
-  },
-  "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
-    "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
-  },
-  "main": "gfs-store.html",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/GlobalFreightSolutions/gfs-store.git"
-  },
-  "ignore": [],
-  "resolutions": {
-    "polymer": "^1.10.0"
-  }
+  "version": "2.0.0",
+  "license": "Apache-2.0"
 }

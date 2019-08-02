@@ -1,0 +1,31 @@
+{
+    "description": "The gfs-store widget is used to show the available stores on the map",
+    "keywords": [
+        "GFS",
+        "store",
+        "web-components",
+        "web-component"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GlobalFreightSolutions/gfs-store.git"
+    },
+    "name": "@gfsdeliver/gfs-store",
+    "version": "2.0.0-preview.1",
+    "main": "gfs-store.js",
+    "author": "Global Freight Solutions",
+    "license": "Apache-2.0",
+    "scripts": {
+        "start": "polymer serve"
+    },
+    "dependencies": {
+        "@polymer/polymer": "^3.0.0",
+        "@webcomponents/webcomponentsjs": "^1.2.0",
+        "@gfsdeliver/gfs-button": "^2.0.0-preview.1",
+        "@gfsdeliver/gfs-toast": "^2.0.0-preview.1"
+    },
+    "devDependencies": {
+        "polymer-cli": "^1.7.1",
+        "wct-browser-legacy": "^1.0.0"
+    }
+}
