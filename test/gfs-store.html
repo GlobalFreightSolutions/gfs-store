@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>gfs-store basic tests</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+        <script src="../node_modules/wct-browser-legacy/browser.js"></script>
+    </head>
+
+    <body>
+        <test-fixture id="gfStore">
+            <template>
+                <gfs-store
+                    container-class="dp-card"
+                    show-distance="true"
+                    show-opening-hours="true"
+                    store-data='{"id":"393","title":"all day working, except user holidays","address":["Northcote Road 144","sw110rd","GB"],"geo":{"lat":51.4570808410644,"long":-0.16344328224659,"distance":224},"detail":"/api/stores/393","provider":"GFS","countryCode":"GB","isDroppoint":false,"isStore":true,"marker":"","storeDescription":"all day working, except user holidays","weekCollection":[{"dayOfWeek":"sunday","slots":[{"from":"09:07","to":"13:07","fromTime":"09:07","toTime":"13:07"}]},{"dayOfWeek":"monday","slots":[{"from":"11:01","to":"17:01","fromTime":"11:01","toTime":"17:01"}]},{"dayOfWeek":"tuesday","slots":[{"from":"10:02","to":"18:02","fromTime":"10:02","toTime":"18:02"}]},{"dayOfWeek":"wednesday","slots":[{"from":"10:03","to":"18:03","fromTime":"10:03","toTime":"18:03"}]},{"dayOfWeek":"thursday","slots":[{"from":"10:04","to":"18:04","fromTime":"10:04","toTime":"18:04"}]},{"dayOfWeek":"friday","slots":[{"from":"10:05","to":"18:05","fromTime":"10:05","toTime":"18:05"}]},{"dayOfWeek":"saturday","slots":[{"from":"10:06","to":"18:06","fromTime":"10:06","toTime":"18:06"}]}]}'>
+                </gfs-store>
+            </template>
+        </test-fixture>
+
+        <script type="module">
+            import '@polymer/iron-test-helpers/mock-interactions.js';
+            import '../gfs-store.js';
+
+            suite('gfs-store', () => {
+                var store;
+
+                setup( () => {
+                    store = fixture('gfStore');
+                });
+
+                test('instantiating the element works', () => {
+                    expect(store).to.be.ok;
+                });
+
+                test('show distance hours is true', () => {
+                    expect(store.showDistance).to.be.eql(true);
+                });
+
+                test('show opening hours is true', () => {
+                    expect(store.showOpeningHours).to.be.eql(true);
+                });
+
+                test('weekCollection have 7 days', () => {
+                    expect(store.storeData.weekCollection).to.have.length(7);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <title>gfs-store demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2.0.0/webcomponents-loader.js"></script>
+        <script type="module">
+            import '@polymer/iron-demo-helpers/demo-snippet.js';
+            import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
+            import '@polymer/iron-icons/iron-icons.js';
+            import '../gfs-store.js';
+            import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+
+            const template = html
+                `<custom-style>
+                    <style is="custom-style" include="demo-pages-shared-styles"></style>
+                </custom-style>`;
+            document.body.appendChild(template.content);
+        </script>
+    </head>
+    <body>
+        <div class="vertical-section-container centered"></div>
+            <demo-snippet>
+                <template>
+                    <gfs-store
+                        container-class="dp-card"
+                        show-opening-hours="true"
+                        button-type="standard"
+                        store-data='{"id":"393","title":"all day working, except user holidays","address":["Northcote Road 144","sw110rd","GB"],"geo":{"lat":51.4570808410644,"long":-0.16344328224659,"distance":224},"detail":"/api/stores/393","provider":"GFS","countryCode":"GB","isDroppoint":false,"isStore":true,"marker":"","storeDescription":"all day working, except user holidays","weekCollection":[{"dayOfWeek":"sunday","slots":[{"from":"09:07","to":"13:07","fromTime":"09:07","toTime":"13:07"}]},{"dayOfWeek":"monday","slots":[{"from":"11:01","to":"17:01","fromTime":"11:01","toTime":"17:01"}]},{"dayOfWeek":"tuesday","slots":[{"from":"10:02","to":"18:02","fromTime":"10:02","toTime":"18:02"}]},{"dayOfWeek":"wednesday","slots":[{"from":"10:03","to":"18:03","fromTime":"10:03","toTime":"18:03"}]},{"dayOfWeek":"thursday","slots":[{"from":"10:04","to":"18:04","fromTime":"10:04","toTime":"18:04"}]},{"dayOfWeek":"friday","slots":[{"from":"10:05","to":"18:05","fromTime":"10:05","toTime":"18:05"}]},{"dayOfWeek":"saturday","slots":[{"from":"10:06","to":"18:06","fromTime":"10:06","toTime":"18:06"}]}]}'>
+                    </gfs-store>
+                </template>
+            </demo-snippet>
+        </div>
+    </body>
+</html>
